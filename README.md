@@ -32,7 +32,7 @@
 | | Week | Task | Status |
 |---|---|---|---|
 | ✅ | **Week 1** | Setup and Created dataset using Continue AI  | Done |
-<!-- | ⬜ | **Week 2** | Clean data & implement Recovery Score logic | Upcoming |
+| ✅ | **Week 2** | Clean data & implement Recovery Score logic | Done |
 | ⬜ | **Week 3** | Build Streamlit UI and KPI metrics | Upcoming |
 | ⬜ | **Week 4** | Add Plotly visualizations & `@st.cache` optimization | Upcoming |
 | ⬜ | **Week 5** | Finalize documentation and deploy live | Upcoming | -->
