@@ -38,3 +38,37 @@ def load_data():
         df['Date'] = pd.to_datetime(df['Date'], errors='coerce')
 
     return df
+
+
+def calculate_recovery_score(df):
+    """
+    Calculate and add 'Recovery_Score' to the DataFrame.
+
+    The score is calculated based on:
+    - Sleep_Hours: 7+ hours significantly improve the score, <6 is bad.
+    - Heart_Rate_bpm: A lower heart rate is better.
+    - Steps: Higher steps can indicate good activity but might slightly reduce recovery.
+
+    Args:
+        df (pd.DataFrame): DataFrame with necessary health data columns.
+    """
+    # Initialize Recovery_Score with a baseline of 50
+    df['Recovery_Score'] = 50
+
+    # Adjust score based on Sleep_Hours
+    df.loc[df['Sleep_Hour'] >= 7, 'Recovery_Score'] += 20  # Good sleep
+    df.loc[df['Sleep_Hour'] < 6, 'Recovery_Score'] -= 20  # Poor sleep
+
+    # Adjust score based on Heart_Rate_bpm
+    # Lower heart rate improves recovery
+    df['Recovery_Score'] -= (df['Heart_Rate_bpm'] - 65) * 0.5
+
+    # Adjust score based on Steps
+    # High steps may slightly decrease recovery due to potential strain
+    df['Recovery_Score'] -= ((df['Steps'] - 10000) / 1000) * 2
+
+    # Ensure Recovery_Score stays between 0 and 100
+    df['Recovery_Score'] = df['Recovery_Score'].clip(lower=0, upper=100)
+
+    return df
+
