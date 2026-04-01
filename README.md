@@ -1,3 +1,9 @@
+# 🌟 Moksh Kulshrestha
+
+> *FitSync Analytics — Code with AI @ Saras AI Institute*
+
+---
+ 
 # 🚀 Code with AI: FitSync Analytics
 
 Welcome to the **FitSync** project! This repository is your home for the next 5 weeks as we build a professional-grade health analytics dashboard using AI-driven workflows.
@@ -20,7 +26,8 @@ We use a cloud-based "AI Cockpit" to ensure a consistent environment for everyon
 
 ## 📅 Weekly Workflow (Update After Each Session)
 You are expected to commit your progress after every live session.
-* **Week 1:** Scaffold folders and generate `health_data.csv`.
+
+* **Week 1:** ✅ Created dataset using AI
 * **Week 2:** Clean data and implement the `Recovery Score` logic.
 * **Week 3:** Build the Streamlit UI and KPI metrics.
 * **Week 4:** Add Plotly visualizations and @st.cache optimization.
@@ -33,4 +40,26 @@ You are expected to commit your progress after every live session.
 4. **Note:** Your code will also be automatically graded via GitHub Actions.
 
 ---
-*Built with GitHub Copilot & Cursor @ Saras AI Institute*.
+*Built with GitHub Copilot & Cursor @ Saras AI Institute*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* **Week 1:** Scaffold folders and generate `health_data.csv`.
