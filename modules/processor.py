@@ -55,7 +55,7 @@ def calculate_recovery_score(df):
     # Initialize Recovery_Score with a baseline of 50
     df['Recovery_Score'] = 50
 
-    # Adjust score based on Sleep_Hours
+    # Adjust score based on Sleep_Hour
     df.loc[df['Sleep_Hour'] >= 7, 'Recovery_Score'] += 20  # Good sleep
     df.loc[df['Sleep_Hour'] < 6, 'Recovery_Score'] -= 20  # Poor sleep
 
@@ -64,11 +64,27 @@ def calculate_recovery_score(df):
     df['Recovery_Score'] -= (df['Heart_Rate_bpm'] - 65) * 0.5
 
     # Adjust score based on Steps
-    # High steps may slightly decrease recovery due to potential strain
     df['Recovery_Score'] -= ((df['Steps'] - 10000) / 1000) * 2
 
     # Ensure Recovery_Score stays between 0 and 100
     df['Recovery_Score'] = df['Recovery_Score'].clip(lower=0, upper=100)
 
+    return df
+
+
+def process_data():
+    """
+    Load data, calculate recovery score, and return the processed DataFrame.
+
+    Returns:
+        pd.DataFrame: A processed pandas DataFrame with recovery scores.
+    """
+    # Load and clean data
+    df = load_data()
+
+    # Calculate recovery scores
+    df = calculate_recovery_score(df)
+
+    # Return the final processed DataFrame
     return df
 
