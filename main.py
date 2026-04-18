@@ -1,72 +1,39 @@
 import streamlit as st
-from modules.processor import process_data
-import pandas as pd
 
-# Configure the Streamlit page
-st.set_page_config(layout="wide", page_title="FitSync")
+# Default theme in session state if not set
+if 'theme' not in st.session_state:
+    st.session_state['theme'] = 'Light'
 
-# Title of the dashboard
-st.title("FitSync - Personal Health Analytics")
+# Sidebar theme toggle
+selected_theme = st.sidebar.radio("Select Theme", ("Light", "Dark"), index=0 if st.session_state['theme'] == 'Light' else 1)
 
-# Sidebar Configuration
-st.sidebar.title("FitSync Dashboard")
+# Update session state with the selected theme
+st.session_state['theme'] = selected_theme
 
-# User Information
-st.sidebar.write("User: Moksh")
-
-# Sidebar filter
-st.sidebar.header("Filter")
-time_range = st.sidebar.selectbox(
-    "Select Time Range",
-    options=['Last 7 days', 'Last 30 days', 'All Time'],
-    index=2
-)
-
-# Load and process data
-df = process_data()
-
-# Handle empty or None data early
-if df is None or df.empty:
-    st.warning("No data available. Please check your dataset.")
-    st.stop()
-
-# Ensure 'Date' is in datetime format
-df['Date'] = pd.to_datetime(df['Date'], errors='coerce')
-
-# Drop rows where Date is invalid
-df = df.dropna(subset=['Date'])
-
-# Debugging: Show dataset date range
-st.write("📊 Data available from:", df['Date'].min(), "to", df['Date'].max())
-
-# 🔥 IMPORTANT FIX: Use dataset's latest date instead of today's date
-current_date = df['Date'].max()
-
-# Filter DataFrame based on selection
-if time_range == 'Last 7 days':
-    df = df[df['Date'] >= current_date - pd.Timedelta(days=7)]
-elif time_range == 'Last 30 days':
-    df = df[df['Date'] >= current_date - pd.Timedelta(days=30)]
-
-# Debugging after filtering
-if not df.empty:
-    st.write("✅ Filtered data from:", df['Date'].min(), "to", df['Date'].max())
+# Apply theme settings
+if st.session_state['theme'] == "Dark":
+    st.markdown(
+        """
+        <style>
+        body {background-color: #333; color: #fff}
+        .css-1cpxqw2 {background-color: #2e2e2e !important} /* Sidebar */
+        .css-1cpxqw2 .css-1vencpc, .css-1cpxqw2 .css-1v3fvcr {color: #ddd !important} /* Text in Sidebar and Inputs */
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
 else:
-    st.warning("⚠️ No data available for the selected time range.")
+    st.markdown(
+        """
+        <style>
+        body {background-color: #fff; color: #000}
+        .css-1cpxqw2 {background-color: #f4f4f4 !important} /* Sidebar */
+        .css-1cpxqw2 .css-1vencpc, .css-1cpxqw2 .css-1v3fvcr {color: #333 !important} /* Text in Sidebar and Inputs */
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
 
-# Calculate necessary metrics
-avg_steps = df['Steps'].mean() if not df.empty else 0
-avg_sleep_hours = round(df['Sleep_Hour'].mean(), 1) if not df.empty else 0
-avg_recovery_score = round(df['Recovery_Score'].mean(), 1) if not df.empty else 0
-
-# Create a 3-column layout for metrics
-col1, col2, col3 = st.columns(3)
-
-# Display metrics
-col1.metric(label="Average Steps", value=f"{avg_steps:.0f}")
-col2.metric(label="Average Sleep Hours", value=f"{avg_sleep_hours:.1f}")
-col3.metric(label="Average Recovery Score", value=f"{avg_recovery_score:.1f}")
-
-# Display the processed data
-st.write("Here is your processed health data:")
-st.dataframe(df)
+# Example content for main page
+st.title("Welcome to the Main Page")
+st.write("This page serves as the entry point to the application.")
