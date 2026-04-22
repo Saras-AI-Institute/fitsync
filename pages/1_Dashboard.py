@@ -2,36 +2,15 @@ import streamlit as st
 from modules.processor import process_data
 import pandas as pd
 import plotly.express as px
+from modules import theme
 
 # Configure the Streamlit page
 st.set_page_config(layout="wide", page_title="FitSync")
 
-# Add theme toggle button
-theme = st.sidebar.radio("Select Theme", ("Light", "Dark"))
-
-# Apply theme settings
-if theme == "Dark":
-    st.markdown(
-        """
-        <style>
-        body {background-color: #333; color: #fff}
-        .css-1cpxqw2 {background-color: #2e2e2e !important} /* Sidebar */
-        .css-1cpxqw2 .css-1vencpc, .css-1cpxqw2 .css-1v3fvcr {color: #ddd !important} /* Text in Sidebar and Inputs */
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
-else:
-    st.markdown(
-        """
-        <style>
-        body {background-color: #fff; color: #000}
-        .css-1cpxqw2 {background-color: #f4f4f4 !important} /* Sidebar */
-        .css-1cpxqw2 .css-1vencpc, .css-1cpxqw2 .css-1v3fvcr {color: #333 !important} /* Text in Sidebar and Inputs */
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
+# Initialize and apply centralized theme (shared key 'theme')
+theme.init_theme()
+theme.render_theme_toggle()
+theme.apply_theme()
 
 # Title of the dashboard
 st.title("FitSync - Personal Health Analytics")
@@ -90,10 +69,41 @@ avg_recovery_score = round(df['Recovery_Score'].mean(), 1) if not df.empty else 
 # Create a 3-column layout for metrics
 col1, col2, col3 = st.columns(3)
 
-# Display metrics
-col1.metric(label="Average Steps", value=f"{avg_steps:.0f}")
-col2.metric(label="Average Sleep Hours", value=f"{avg_sleep_hours:.1f}")
-col3.metric(label="Average Recovery Score", value=f"{avg_recovery_score:.1f}")
+# Add custom CSS for colored metric cards
+st.markdown("""
+<style>
+.metric-green { background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%); border-radius: 10px; padding: 20px; color: white; text-align: center; }
+.metric-blue { background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%); border-radius: 10px; padding: 20px; color: white; text-align: center; }
+.metric-orange { background: linear-gradient(135deg, #FF9800 0%, #F57C00 100%); border-radius: 10px; padding: 20px; color: white; text-align: center; }
+.metric-label { font-size: 14px; font-weight: 600; opacity: 0.9; margin-bottom: 8px; }
+.metric-value { font-size: 32px; font-weight: bold; }
+</style>
+""", unsafe_allow_html=True)
+
+# Display metrics with custom colors
+with col1:
+    st.markdown(f"""
+    <div class="metric-green">
+        <div class="metric-label">🚶 Average Steps</div>
+        <div class="metric-value">{avg_steps:.0f}</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+with col2:
+    st.markdown(f"""
+    <div class="metric-blue">
+        <div class="metric-label">😴 Average Sleep Hours</div>
+        <div class="metric-value">{avg_sleep_hours:.1f}</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+with col3:
+    st.markdown(f"""
+    <div class="metric-orange">
+        <div class="metric-label">💪 Average Recovery Score</div>
+        <div class="metric-value">{avg_recovery_score:.1f}</div>
+    </div>
+    """, unsafe_allow_html=True)
 
 # Display the processed data
 st.write("Here is your processed health data:")
@@ -104,123 +114,40 @@ def create_dual_line_chart(data):
     fig = px.line(data, x='Date', y=['Recovery_Score', 'Sleep_Hour'],
                   title='Recovery Score & Sleep Trend',
                   labels={'value': 'Score/Hours', 'variable': 'Metric'})
-    return fig
+    return theme.style_plotly_chart(fig)
 
 # Create scatter plot for Recovery Score vs Steps colored by Sleep Hours
 def create_scatter_plot(data):
     fig = px.scatter(data, x='Steps', y='Recovery_Score', color='Sleep_Hour',
                      title='Recovery Score vs Daily Steps',
                      labels={'x': 'Daily Steps', 'y': 'Recovery Score'})
-    return fig
+    return theme.style_plotly_chart(fig)
 
 # Create scatter plot for Recovery Score vs Heart Rate
 def create_scatter_plot_hr(data):
     fig = px.scatter(data, x='Heart_Rate_bpm', y='Recovery_Score',
                      title='Recovery Score vs Heart Rate',
                      labels={'x': 'Heart Rate (bpm)', 'y': 'Recovery Score'})
-    return fig
+    return theme.style_plotly_chart(fig)
 
 # Create line chart for Calories Burned
 def create_line_chart_calories(data):
     fig = px.line(data, x='Date', y='calories_burned',
                   title='Daily Calories Burned Trend',
                   labels={'y': 'Calories Burned'})
-    return fig
+    return theme.style_plotly_chart(fig)
 
 # Define layout for dual charts
 dual_col1, dual_col2 = st.columns(2)
 with dual_col1:
-    st.plotly_chart(create_dual_line_chart(df), use_container_width=True)
+    st.plotly_chart(create_dual_line_chart(df), use_container_width=True, key='dual_line_1')
 with dual_col2:
-    st.plotly_chart(create_scatter_plot(df), use_container_width=True)
+    st.plotly_chart(create_scatter_plot(df), use_container_width=True, key='scatter_steps_1')
 
 # Define layout for scatter plots
 scatter_col1, scatter_col2 = st.columns(2)
 with scatter_col1:
-    st.plotly_chart(create_scatter_plot_hr(df), use_container_width=True)
+    st.plotly_chart(create_scatter_plot_hr(df), use_container_width=True, key='scatter_hr_1')
 with scatter_col2:
-    st.plotly_chart(create_line_chart_calories(df), use_container_width=True)
+    st.plotly_chart(create_line_chart_calories(df), use_container_width=True, key='calories_1')
 
-# Create scatter plot for Recovery Score vs Steps colored by Sleep Hours
-def create_scatter_plot(data):
-    fig = px.scatter(data, x='Steps', y='Recovery_Score', color='Sleep_Hour',
-                     title='Recovery Score vs Daily Steps',
-                     labels={'x': 'Daily Steps', 'y': 'Recovery Score'})
-    return fig
-
-# Create scatter plot for Recovery Score vs Heart Rate
-def create_scatter_plot_hr(data):
-    fig = px.scatter(data, x='Heart_Rate_bpm', y='Recovery_Score',
-                     title='Recovery Score vs Heart Rate',
-                     labels={'x': 'Heart Rate (bpm)', 'y': 'Recovery Score'})
-    return fig
-
-# Create line chart for Calories Burned
-def create_line_chart_calories(data):
-    fig = px.line(data, x='Date', y='calories_burned',
-                  title='Daily Calories Burned Trend',
-                  labels={'y': 'Calories Burned'})
-    return fig
-
-# Define layout for dual charts
-dual_col1, dual_col2 = st.columns(2)
-with dual_col1:
-    st.plotly_chart(create_dual_line_chart(df), use_container_width=True)
-with dual_col2:
-    st.plotly_chart(create_scatter_plot(df), use_container_width=True)
-
-# Define layout for scatter plots
-scatter_col1, scatter_col2 = st.columns(2)
-with scatter_col1:
-    st.plotly_chart(create_scatter_plot_hr(df), use_container_width=True)
-with scatter_col2:
-    st.plotly_chart(create_line_chart_calories(df), use_container_width=True)
-
-import streamlit as st
-from modules.processor import process_data
-import pandas as pd
-import plotly.express as px
-
-# Configure the Streamlit page
-st.set_page_config(layout="wide", page_title="FitSync")
-
-# Default theme to light mode if not set
-if 'theme' not in st.session_state:
-    st.session_state['theme'] = 'Light'
-
-# Sidebar theme toggle for user
-selected_theme = st.sidebar.radio("Select Theme", ("Light", "Dark"), index=0 if st.session_state['theme'] == 'Light' else 1)
-
-# Update the session state with the selected theme
-st.session_state['theme'] = selected_theme
-
-# Apply consistent light theme
-if st.session_state['theme'] == "Dark":
-    # Dark mode styles are similar to before
-    st.markdown(
-        """
-        <style>
-        body {background-color: #333; color: #fff}
-        .css-1cpxqw2 {background-color: #2e2e2e !important} /* Sidebar */
-        .css-1cpxqw2 .css-1vencpc, .css-1cpxqw2 .css-1v3fvcr {color: #ddd !important} /* Text in Sidebar and Inputs */
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
-else:
-    # Light mode styles
-    st.markdown(
-        """
-        <style>
-        body {background-color: #f9f9f9; color: #333}
-        .css-1cpxqw2 {background-color: #ffffff !important} /* Sidebar */
-        .css-1cpxqw2 .css-1vencpc, .css-1cpxqw2 .css-1v3fvcr {color: #333 !important} /* Text in Sidebar and Inputs */
-        .css-1vq4p4l, .css-1pwf07v, .css-1ophc2l, .css-gg4vpm {background-color: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.1);} /* Items */
-        button {background-color: #007BFF; color: #fff; font-size: .875rem; padding: .5rem 1rem; border-radius: .25rem; border: none;}
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
-
-# Title of the dashboard
-st.title("FitSync - Personal Health Analytics")
