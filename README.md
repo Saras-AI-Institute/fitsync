@@ -23,22 +23,20 @@
 ▀▀▀▀▀▀▀▀▀▀▀▀▀-     ▀▀▀▀▀▀▀▀▀▀       '╧╧╧╧╧╧╧╧╧`     ╚ ╧╧╧- ▀  ╚═╝     ╚═╝╚══════╝╚══════╝   ╚═╝        ╚═╝    ╚═════╝  ╚═════╝
 ```
 
-<div align="center">
+<div align="left">
 
 Made with 💜 by [Moksh](https://www.linkedin.com/in/moksh-k-6ab504231/)
 
-# <img src="https://user-images.githubusercontent.com/74038190/213844263-a8897a51-32f4-4b3b-b5c2-e1528b89f6f3.png" width="50px" /> &nbsp; FitSync &nbsp; <img src="https://user-images.githubusercontent.com/74038190/213844263-a8897a51-32f4-4b3b-b5c2-e1528b89f6f3.png" width="50px" />
 
 
-
-<div align="center">
+<div align="left">
 	<img src="https://user-images.githubusercontent.com/74038190/213866269-5d00981c-7c98-46d7-8a8e-16f462f15227.gif" width="200" />
 	<img src="https://user-images.githubusercontent.com/74038190/213866269-5d00981c-7c98-46d7-8a8e-16f462f15227.gif" width="200" />
 	<img src="https://user-images.githubusercontent.com/74038190/213866269-5d00981c-7c98-46d7-8a8e-16f462f15227.gif" width="200" />
 </div> 
 
-<div align="center">
-# FitSync — Personal Health Analytics
+<div align="left">
+# 🔶 **FitSync — Personal Health Analytics**
 
 FitSync is a Streamlit-based personal health analytics dashboard that ingests daily health records (steps, sleep, heart rate, calories, active minutes), computes a daily Recovery Score, and visualizes trends with Plotly.
 
@@ -50,12 +48,11 @@ Key features
 
 ---
 
-## 📅 Weekly Progress
-
-| | Week | Task | Status |
-|---|---|---|---|
+![FitSync demo 1](https://user-images.githubusercontent.com/74038190/213866269-5d00981c-7c98-46d7-8a8e-16f462f15227.gif)
+![FitSync demo 2](https://user-images.githubusercontent.com/74038190/213866269-5d00981c-7c98-46d7-8a8e-16f462f15227.gif)
+![FitSync demo 3](https://user-images.githubusercontent.com/74038190/213866269-5d00981c-7c98-46d7-8a8e-16f462f15227.gif)
 | ✅ | **Week 1** | Setup and created dataset using generator | Done |
-| ✅ | **Week 2** | Clean data & implement Recovery Score logic | Done |
+# 🔶 **FitSync — Personal Health Analytics**
 | ✅ | **Week 3** | Build Streamlit UI and KPI metrics | Done |
 | ✅ | **Week 4** | Add Plotly visualizations & caching optimizations | Done |
 | ✅ | **Week 5** | Finalize documentation and deploy live | Done |
@@ -67,7 +64,6 @@ Key features
 ## Repository structure
 
 - `main.py` — Landing / marketing page (hero, features, how it works, preview, CTA)
-- `main_new.py` — Alternate entry (variant of dashboard)
 - `pages/1_Dashboard.py` — Primary dashboard page (KPIs + charts)
 - `pages/2_Trends.py` — Trends and statistical views
 - `modules/processor.py` — Data loading, cleaning and `Recovery_Score` logic
