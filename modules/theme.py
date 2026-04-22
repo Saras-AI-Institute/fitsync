@@ -176,7 +176,7 @@ def style_plotly_chart(fig):
     """
     current_theme = str(st.session_state.get("theme", "light")).lower()
     is_dark = "dark" in current_theme
-
+ 
     if is_dark:
         fig.update_layout(
             template="plotly_dark",
