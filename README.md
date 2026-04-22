@@ -34,7 +34,7 @@
 | ✅ | **Week 1** | Setup and Created dataset using Continue AI  | Done |
 | ✅ | **Week 2** | Clean data & implement Recovery Score logic | Done |
 | ✅  | **Week 3** | Build Streamlit UI and KPI metrics | Done |
-| ⬜ | **Week 4** | Dark Mode and Main Page Added  | Upcoming |
+| ✅ | **Week 4** | Dark Mode and Main Page Added  | Done |
 <!--| ⬜ | **Week 5** | Finalize documentation and deploy live | Upcoming | -->
 
 ---
