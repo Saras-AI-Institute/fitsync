@@ -47,15 +47,16 @@ Key features
 - Synthetic data generator and sample dataset included
 
 ---
-
-![FitSync demo 1](https://user-images.githubusercontent.com/74038190/213866269-5d00981c-7c98-46d7-8a8e-16f462f15227.gif)
-![FitSync demo 2](https://user-images.githubusercontent.com/74038190/213866269-5d00981c-7c98-46d7-8a8e-16f462f15227.gif)
-![FitSync demo 3](https://user-images.githubusercontent.com/74038190/213866269-5d00981c-7c98-46d7-8a8e-16f462f15227.gif)
-| ✅ | **Week 1** | Setup and created dataset using generator | Done |
 # 🔶 **FitSync — Personal Health Analytics**
+
+| ✅ | **Week 1** | Setup and created dataset using generator | Done |
+
 | ✅ | **Week 3** | Build Streamlit UI and KPI metrics | Done |
+
 | ✅ | **Week 4** | Add Plotly visualizations & caching optimizations | Done |
+
 | ✅ | **Week 5** | Finalize documentation and deploy live | Done |
+
 
 ---
 
