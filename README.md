@@ -1,29 +1,55 @@
+
+
+```
+████████████████████████████████████████████████████████████  ██╗  ██╗███████╗██╗     ██╗      ██████╗
+████████████████████████████████████████████████████████████  ██║  ██║██╔════╝██║     ██║     ██╔═══██╗
+███████████████████████████████████████`.        ╙██████████████  ███████║█████╗  ██║     ██║     ██║   ██║
+████████████████████████████████▀  ¿▓▓▓▓▓▓▓▓▄/ "████████████  ██╔══██║██╔══╝  ██║     ██║     ██║   ██║
+██████████████████████████████▀.  ▓▓▓▓▓▓▓▓▓▓▓▓   ▐██████████  ██║  ██║███████╗███████╗███████╗╚██████╔╝▄█╗
+██████████████████████████████ `  ▓▓▓▓▓▓▓▓▓▓▓▓  ` ██████████  ╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝ ╚═════╝ ╚═╝
+██████████████████████████████ `  ▓▓▓▓▓▓▓▓▓▓▓▓   ▄██████████
+▀██████████████████████████████▌  ▀▀▓▓▓▓▓▓▓▌╓╖. ████████████  ███╗   ██╗██╗ ██████╗███████╗  ████████╗ ██████╗
+█▄▀██████████████████████████████▄ ╩╦╙▀▀▀▀▀ ╣`,█████████████  ████╗  ██║██║██╔════╝██╔════╝  ╚══██╔══╝██╔═══██╗
+▄▀█▄╙█████████████████████▀▀▀▀█████▄▄ .... ,▄███████▀███████  ██╔██╗ ██║██║██║     █████╗       ██║   ██║   ██║
+██▄▀█▄╙█████████████████▀  ╪╢%╦══~╓,└ ╚▒▒▒ ╙▀|,╓╓═╤H   ▀████  ██║╚██╗██║██║██║     ██╔══╝       ██║   ██║   ██║
+█▀▀▀-▀█▌▄▀█████████████   ║▒▒▒▒▒▒▒▒▒▒╢╦ ╘ -╣▒▒▒▒▒▒▒▒▒╢╕   ▀█  ██║ ╚████║██║╚██████╗███████╗     ██║   ╚██████╔╝
+██▄▀██└║▄▄▄████████████▄          ═╕╕╕╕╕═╕═══════       ▄▄▄▄  ╚═╝  ╚═══╝╚═╝ ╚═════╝╚══════╝     ╚═╝    ╚═════╝
+████▄▀█▌║███  ████████▌         ╕   ╩▒▒▒▒▒▒▒▒▒Ñ          ███
+██████▌Ö▓▌   ▀██████████`╔▒▒╣ █ ▒▒m   ╚▒╢▒▒▒╩ -╣▒ ▌ ▒▒▒ ████  ███╗   ███╗███████╗███████╗████████╗  ██╗   ██╗ ██████╗ ██╗   ██╗
+████ -"" ∞╙,▀.╙▀███████╜ ▒▒▒ ▄█ Ñ   -   S.  ═▒▒▒▒ █ ║▒▒╕└███  ████╗ ████║██╔════╝██╔════╝╚══██╔══╝  ╚██╗ ██╔╝██╔═══██╗██║   ██║
+████████▄ -«   ∞▄.▀","╓═     ╒██   ═╣▒▒ `Ñ╛        █▌ ▒▒▒ ███  ██╔████╔██║█████╗  █████╗     ██║      ╚████╔╝ ██║   ██║██║   ██║
+█████████▌ º     ╤╣▒╣╩^",▄▄███▀  ▒▒╣"     ''''''' ▀▀     `██  ██║╚██╔╝██║██╔══╝  ██╔══╝     ██║       ╚██╔╝  ██║   ██║██║   ██║
+█████████  ▌       ▄▄████████─         ---------    L'▒▒▒ ██  ██║ ╚═╝ ██║███████╗███████╗   ██║        ██║   ╚██████╔╝╚██████╔╝
+▀▀▀▀▀▀▀▀▀▀▀▀▀-     ▀▀▀▀▀▀▀▀▀▀       '╧╧╧╧╧╧╧╧╧`     ╚ ╧╧╧- ▀  ╚═╝     ╚═╝╚══════╝╚══════╝   ╚═╝        ╚═╝    ╚═════╝  ╚═════╝
+```
+
 <div align="center">
 
-<br>
+Made with 💜 by [Anmol](https://twitter.com/Anmol_Codes)
 
-<sub>BUILT BY</sub>
+# <img src="https://user-images.githubusercontent.com/74038190/213844263-a8897a51-32f4-4b3b-b5c2-e1528b89f6f3.png" width="50px" /> &nbsp; GIFs For Readme &nbsp; <img src="https://user-images.githubusercontent.com/74038190/213844263-a8897a51-32f4-4b3b-b5c2-e1528b89f6f3.png" width="50px" />
 
-# *Moksh Kulshrestha*
-
-**FitSync Analytics &nbsp;·&nbsp; Code with AI &nbsp;·&nbsp; Saras AI Institute**
-
-![Personal Health Analytics](https://img.shields.io/badge/Personal%20Health%20Analytics-7F77DD?style=flat-square&labelColor=EEEDFE&color=534AB7)
-![Streamlit + Plotly](https://img.shields.io/badge/Streamlit%20+%20Plotly-1D9E75?style=flat-square&labelColor=E1F5EE&color=0F6E56)
-![5-Week Sprint](https://img.shields.io/badge/5--Week%20Sprint-BA7517?style=flat-square&labelColor=FAEEDA&color=854F0B)
-
+<a href="https://github.com/Anmol-Baranwal/GIFs-For-Readme"><img src="https://forthebadge.com/images/badges/built-with-love.svg" width="130" alt="made with love  markdown badge" ></a>  <a href="https://github.com/Anmol-Baranwal/GIFs-For-Readme"><img src="https://forthebadge.com/images/badges/built-with-swag.svg" width="130" alt="made with swag markdown badge"></a> 
+<a href="https://github.com/Anmol-Baranwal/GIFs-For-Readme"><img src="https://forthebadge.com/images/badges/open-source.svg" width="130" height="30" alt="open source  markdown badge"></a>  
+<br><a href="https://github.com/Anmol-Baranwal/GIFs-For-Readme"><img src="https://forthebadge.com/images/badges/made-with-markdown.svg" width="230" height="30" alt="made with markdown badge"></a> 
 </div>
 
----
+<div align="center">
+	<img src="https://user-images.githubusercontent.com/74038190/213866269-5d00981c-7c98-46d7-8a8e-16f462f15227.gif" width="200" />
+	<img src="https://user-images.githubusercontent.com/74038190/213866269-5d00981c-7c98-46d7-8a8e-16f462f15227.gif" width="200" />
+	<img src="https://user-images.githubusercontent.com/74038190/213866269-5d00981c-7c98-46d7-8a8e-16f462f15227.gif" width="200" />
+</div> 
 
-## 📋 Project Info
+<div align="center">
+# FitSync — Personal Health Analytics
 
-| Field | Details |
-|---|---|
-| **Project** | FitSync |
-| **Course** | Code with AI |
-| **Institution** | Saras AI Institute |
-| **Repo format** | `fitsync-project-firstname-lastname` |
+FitSync is a Streamlit-based personal health analytics dashboard that ingests daily health records (steps, sleep, heart rate, calories, active minutes), computes a daily Recovery Score, and visualizes trends with Plotly.
+
+Key features
+- Recovery score computed from sleep, resting heart rate and activity
+- Interactive dashboard and trends pages with responsive Plotly charts
+- Light / dark theme toggle with CSS overrides
+- Synthetic data generator and sample dataset included
 
 ---
 
@@ -31,31 +57,100 @@
 
 | | Week | Task | Status |
 |---|---|---|---|
-| ✅ | **Week 1** | Setup and Created dataset using Continue AI  | Done |
+| ✅ | **Week 1** | Setup and created dataset using generator | Done |
 | ✅ | **Week 2** | Clean data & implement Recovery Score logic | Done |
-| ✅  | **Week 3** | Build Streamlit UI and KPI metrics | Done |
-| ✅ | **Week 4** | Dark Mode and Main Page Added  | Done |
-<!--| ⬜ | **Week 5** | Finalize documentation and deploy live | Upcoming | -->
+| ✅ | **Week 3** | Build Streamlit UI and KPI metrics | Done |
+| ✅ | **Week 4** | Add Plotly visualizations & caching optimizations | Done |
+| ✅ | **Week 5** | Finalize documentation and deploy live | Done |
 
 ---
 
-## 💻 Getting Started (Codespaces)
+---
 
-1. Click the green **"<> Code"** button at the top right of this page
-2. Select the **Codespaces** tab
-3. Click **"Create codespace on main"**
-4. Ensure the **Continue** extension is active once it loads
+## Repository structure
+
+- `main.py` — Landing / marketing page (hero, features, how it works, preview, CTA)
+- `main_new.py` — Alternate entry (variant of dashboard)
+- `pages/1_Dashboard.py` — Primary dashboard page (KPIs + charts)
+- `pages/2_Trends.py` — Trends and statistical views
+- `modules/processor.py` — Data loading, cleaning and `Recovery_Score` logic
+- `modules/theme.py` — Theme helpers and Plotly styling utility
+- `generate_data.py` — Synthetic dataset generator (writes `data/health_data.csv`)
+- `data/health_data.csv` — Sample dataset used by the app
+- `.streamlit/config.toml` — Streamlit native theme settings
+- `requirements.txt` — Python dependencies
+- `README.md` — This file
 
 ---
 
-## 📤 Submission
+## Quick start (local)
 
-→ Push all changes: `git push origin main`  
-→ Copy your repo URL and paste into the **Module 1 Assignment** slot in the LMS  
-→ Your code is auto-graded via GitHub Actions on every push
+1. Create and activate a Python virtual environment (Windows example):
+
+```powershell
+python -m venv venv
+venv\Scripts\Activate.ps1
+```
+
+2. Install dependencies:
+
+```powershell
+pip install -r requirements.txt
+```
+
+3. (Optional) regenerate the sample dataset:
+
+```powershell
+python generate_data.py
+```
+
+4. Run the app with Streamlit from the repo root:
+
+```powershell
+streamlit run main.py
+```
+
+Or open the dashboard pages directly:
+
+```powershell
+streamlit run pages/1_Dashboard.py
+streamlit run pages/2_Trends.py
+```
 
 ---
 
-<div align="center">
-<sub>Built with GitHub Copilot & Cursor · Saras AI Institute</sub>
-</div>
+## Notes for developers
+
+- Data pipeline: `modules/processor.py` reads `data/health_data.csv`, fills missing values, converts `Date` to datetime, and computes `Recovery_Score`.
+- Caching: pages now use `@st.cache_data` (see `pages/1_Dashboard.py` and `pages/2_Trends.py`) to cache processed data for faster UI responsiveness. Cached results are `.copy()`-ed before per-page filtering to avoid mutating the cached object.
+- Plotly styling: a helper `style_plotly_chart(fig)` is available in `modules/theme.py` to ensure charts respect the active theme.
+- Theme: `.streamlit/config.toml` sets the native Streamlit theme; `modules/theme.py` applies minimal CSS overrides and a sidebar toggle that persists in `st.session_state['theme']`.
+
+---
+
+## Tests & validation
+
+- Simple smoke tests are available in `test.py` / `test1.py` which demonstrate data loading and basic checks. Use `pytest` to run any tests added in the future.
+
+---
+
+## Troubleshooting
+
+- Attribute errors referencing `modules.theme` were resolved by adding the `style_plotly_chart` helper.
+- If charts look off after theme switches, restart Streamlit to ensure CSS and session state resets.
+
+---
+
+## Contributing
+
+If you want to improve FitSync:
+
+1. Create a branch `feature/your-change`
+2. Make small, well-scoped commits
+3. Run the app locally and ensure charts render
+4. Open a PR with a description and screenshots if applicable
+
+---
+
+Built by Moksh Kulshrestha — FitSync Analytics
+
