@@ -8,6 +8,12 @@ st.set_page_config(layout="wide", page_title="FitSync")
 
 from modules import theme
 
+
+@st.cache_data(show_spinner=False)
+def get_processed_data():
+    """Cache processed health data to avoid recomputing on every rerun."""
+    return process_data()
+
 # Initialize and apply centralized theme (shared key 'theme')
 theme.init_theme()
 theme.render_theme_toggle()
@@ -16,7 +22,7 @@ theme.apply_theme()
 # Title of the dashboard
 st.title("FitSync - Personal Health Analytics")
 # Load and process data
-df = process_data()
+df = get_processed_data().copy()
 
 # Handle empty or None data early
 if df is None or df.empty:

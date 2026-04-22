@@ -4,6 +4,12 @@ import pandas as pd
 import plotly.express as px
 from modules import theme
 
+
+@st.cache_data(show_spinner=False)
+def get_processed_data():
+    """Cache processed health data to avoid recomputing on every rerun."""
+    return process_data()
+
 # Configure the Streamlit page
 st.set_page_config(layout="wide", page_title="FitSync")
 
@@ -30,7 +36,7 @@ time_range = st.sidebar.selectbox(
 )
 
 # Load and process data
-df = process_data()
+df = get_processed_data().copy()
 
 # Handle empty or None data early
 if df is None or df.empty:
