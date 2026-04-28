@@ -51,6 +51,8 @@ Key features
 
 | ✅ | **Week 1** | Setup and created dataset using generator | Done |
 
+| ✅ | **Week 2** | Process Dataset using Python | Done |
+
 | ✅ | **Week 3** | Build Streamlit UI and KPI metrics | Done |
 
 | ✅ | **Week 4** | Add Plotly visualizations & caching optimizations | Done |
